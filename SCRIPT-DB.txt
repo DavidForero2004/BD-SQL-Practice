@@ -84,5 +84,31 @@ CREATE INDEX NIdx_NameProducts ON Products (NAME, VALUE);
 CREATE INDEX NIdx_ordrs ON Ordrs (AMOUNT, ProductID);
 
 
+--PROCEDUR FOR INSERT VALUES
+
+DELIMITER //
+
+CREATE PROCEDURE InsertProduct (
+	IN Name_P VARCHAR(50),
+	IN Values_P DOUBLE
+)
+BEGIN 
+	INSERT INTO Products (NAME, VALUE) VALUES (Name_P, Values_P);
+END //
+DELIMITER ;
+
+
+DELIMITER //
+
+CREATE PROCEDURE InsertOrdr (
+	IN P_ID VARCHAR(50),
+	IN Amount_p DOUBLE
+)
+BEGIN 
+	INSERT INTO Ordrs (ProductID, AMOUNT) VALUES (P_ID, Amount_p);
+END //
+DELIMITER ;
+
+
 
 
