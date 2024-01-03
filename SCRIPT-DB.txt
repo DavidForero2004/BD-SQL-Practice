@@ -83,7 +83,6 @@ SELECT * FROM TotalSalesProducts;
 CREATE INDEX NIdx_NameProducts ON Products (NAME, VALUE);
 CREATE INDEX NIdx_ordrs ON Ordrs (AMOUNT, ProductID);
 
-CREATE INDEX Idx_SalesProducts ON TotalSalesProducts (NAME, VALUE,AMOUNT,Total);
 
 
 
